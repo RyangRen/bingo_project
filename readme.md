@@ -1,5 +1,5 @@
-## Bingo number generator and checker
-
+## Bingo ticket generator and checker
+Bingo program for christmas party 2021
 ### Require Packet :
 * numpy
 * termcolor
