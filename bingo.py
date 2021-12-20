@@ -35,12 +35,14 @@ def game():
         try:
             num = int(input('Input : '))
             if num > 0:
+                count = 0
                 for n in range(tickets.shape[0]):
                     tickets[n][tickets[n] == num] = 0
                     check_table[n] = sum_lines(n)
                     if 0 in check_table[n] and n not in bingo_set:
                         print(termcolor.colored(f'ticket {n}, line {np.where(check_table[n] == 0)[0]} bingo!!!', 'red'))
                         bingo_set.append(n)
+                print(f'{count} tickets has number {num}' if count else '')
         except KeyboardInterrupt:
             print('shutdown')
             break
