@@ -37,6 +37,8 @@ def game():
             if num > 0:
                 count = 0
                 for n in range(tickets.shape[0]):
+                    if num in tickets[n]:
+                        count += 1
                     tickets[n][tickets[n] == num] = 0
                     check_table[n] = sum_lines(n)
                     if 0 in check_table[n] and n not in bingo_set:
