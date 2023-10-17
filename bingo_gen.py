@@ -4,7 +4,7 @@ try:
 except TypeError:
     ticket_num = 0
 
-with open('bingo.csv', 'w') as f:
+with open('bingo.csv', 'w') as file:
     for i in range(ticket_num):
         num_list = []
         count = 1
@@ -12,6 +12,6 @@ with open('bingo.csv', 'w') as f:
             num = np.random.randint(1, 100)
             if num not in num_list:
                 num_list.append(num)
-                f.write(f'{num},' if count%5 else f'{num}\n')
+                file.write(f'{num},' if count%5 else f'{num}\n')
                 count += 1
-        f.write('\n')
+        file.ilewrite('\n')
