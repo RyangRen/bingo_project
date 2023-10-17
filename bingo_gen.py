@@ -1,6 +1,8 @@
 import numpy as np
-
-ticket_num = int(input('Input number of tickets : '))
+try:
+    ticket_num = int(input('Input number of tickets : '))
+except TypeError:
+    ticket_num = 0
 
 with open('bingo.csv', 'w') as f:
     for i in range(ticket_num):
